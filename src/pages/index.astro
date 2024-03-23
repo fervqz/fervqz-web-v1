@@ -1,0 +1,98 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Github, Linkedin, NotebookPen, ExternalLink } from "lucide-astro";
+
+interface Link {
+  label: string;
+  Icon: (props: any) => any;
+  url: string;
+  color: string;
+}
+
+const links: Link[] = [
+  {
+    label: "GitHub",
+    Icon: Github,
+    url: import.meta.env.PUBLIC_GITHUB,
+    color: "bg-green-200 hover:bg-green-300",
+  },
+  {
+    label: "Blog",
+    Icon: NotebookPen,
+    url: import.meta.env.PUBLIC_BLOG,
+    color: "bg-blue-200 hover:bg-blue-300",
+  },
+  {
+    label: "LinkedIn",
+    Icon: Linkedin,
+    url: import.meta.env.PUBLIC_LINKEDIN,
+    color: "bg-orange-200 hover:bg-orange-300",
+  },
+];
+---
+
+<MainLayout>
+  <section class="container flex flex-col justify-center h-[100vh]">
+    <div id="card-border" class="rounded-2xl p-[1px]">
+      <div
+        id="card"
+        class="flex flex-col gap-8 rounded-2xl px-6 py-16 md:p-16 overflow-hidden bg-gray-900 shadow-2xl shadow-gray-800"
+      >
+        <div>
+          <h1 class="text-5xl font-black">Fer Vásquez 👨‍💻</h1>
+          <h3 class="text-xl text-gray-400">Full-Stack Web Developer</h3>
+        </div>
+        <p>
+          When I am coding, I like to follow a philosophy of <strong
+            class="text-white">simplicity and elegance</strong
+          >, seamlessly blending <strong class="text-white"
+            >functionality with aesthetics</strong
+          >. I create digital experiences where every element serves its purpose
+          harmoniously, speaking volumes through inherent simplicity.
+        </p>
+        <p class="font-bold text-2xl">Useful links 🚀</p>
+
+        <ul
+          class="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center text-gray-800"
+        >
+          {
+            links.map(({ label, Icon, url, color }) => (
+              <li
+                class={`${color} p-8 rounded-xl min-w-36 hover:cursor-pointer hover:scale-105 transition-transform duration-75`}
+              >
+                <a
+                  href={url}
+                  target="_blank"
+                  class="flex flex-col items-center"
+                >
+                  <Icon size={36} />
+                  <span class="flex gap-1 items-center">
+                    {label}
+                    <ExternalLink size={16} />
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    #card-border {
+      background: rgb(241, 241, 241);
+      background: linear-gradient(
+        45deg,
+        rgb(213, 213, 213) 0%,
+        rgb(113, 113, 113) 20%,
+        rgb(113, 113, 113) 80%,
+        rgb(213, 213, 213) 100%
+      );
+    }
+
+    #card {
+      background-color: #080808;
+    }
+  </style>
+</MainLayout>

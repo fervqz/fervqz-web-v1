@@ -1,0 +1,19 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import NoiseBackground from "../components/NoiseBackground.astro";
+import LightsBackground from "../components/LightsBackground.astro";
+
+const title = "";
+const description = "";
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <LightsBackground />
+    <NoiseBackground />
+    <slot />
+  </body>
+</html>
