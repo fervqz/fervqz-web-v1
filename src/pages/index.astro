@@ -13,19 +13,19 @@ const links: Link[] = [
   {
     label: "GitHub",
     Icon: Github,
-    url: import.meta.env.PUBLIC_GITHUB,
+    url: import.meta.env.PUBLIC_URL_GITHUB,
     color: "bg-green-200 hover:bg-green-300",
   },
   {
     label: "Blog",
     Icon: NotebookPen,
-    url: import.meta.env.PUBLIC_BLOG,
+    url: import.meta.env.PUBLIC_URL_BLOG,
     color: "bg-blue-200 hover:bg-blue-300",
   },
   {
     label: "LinkedIn",
     Icon: Linkedin,
-    url: import.meta.env.PUBLIC_LINKEDIN,
+    url: import.meta.env.PUBLIC_URL_LINKEDIN,
     color: "bg-orange-200 hover:bg-orange-300",
   },
 ];
@@ -67,7 +67,7 @@ const links: Link[] = [
                 >
                   <Icon size={36} />
                   <span class="flex gap-1 items-center">
-                    {label}
+                    <b>{label}</b>
                     <ExternalLink size={16} />
                   </span>
                 </a>
