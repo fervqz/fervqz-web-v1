@@ -1,0 +1,74 @@
+---
+import { Github, Linkedin, NotebookPen, ExternalLink } from "lucide-astro";
+import { useTranslation } from "../lib/useTranslation";
+
+const t = useTranslation();
+
+const USEFUL_LINKS = [
+  {
+    name: "GitHub",
+    url: import.meta.env.PUBLIC_URL_GITHUB,
+    icon: Github,
+  },
+  {
+    name: "LinkedIn",
+    url: import.meta.env.PUBLIC_URL_LINKEDIN,
+    icon: Linkedin,
+  },
+  {
+    name: "Blog",
+    url: import.meta.env.PUBLIC_URL_BLOG,
+    icon: NotebookPen,
+  },
+];
+---
+
+<div
+  id="hero--main-card"
+  class="col-span-12 row-span-1 md:col-span-8 md:row-span-2 border-[1px] bg-elevated-2 bg-gradient-to-tr from-elevated to-[#0a2a54] border-slate-800 rounded-3xl overflow-hidden"
+>
+  <div class="flex flex-row h-full">
+    <div class="w-full h-full pl-6 py-6 flex flex-col">
+      <div class="flex-1 flex flex-col justify-center">
+        <h1 class="font-semibold text-4xl text-white">{t("hero.title1")}</h1>
+        <h1 class="font-semibold text-4xl text-white">
+          {t("hero.title2")}
+          <span
+            class="text-4xl font-semibold bg-gradient-to-t from-[#2bfa3c] to-[#2bfa3c] bg-clip-text text-transparent"
+            >{t("hero.title3")}</span
+          >
+        </h1>
+        <h2 class="font-light mt-4 text-2xl">{t("hero.subtitle")}</h2>
+      </div>
+
+      <ul class="flex flex-row gap-4 mt-4 text-black">
+        {
+          USEFUL_LINKS.map((link) => {
+            const Icon = link.icon;
+            return (
+              <li class="bg-gray-50 py-2 px-4 rounded-lg w-fit text-sm font-blod hover:scale-105 hover:bg-white hover:pointer-cursor transition-transform">
+                <a
+                  href={link.url}
+                  target="_blank"
+                  class="flex flex-row gap-2 items-center font-normal"
+                >
+                  <Icon size={18} />
+                  {link.name}
+                  <ExternalLink size={18} />
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+
+    <img
+      class="size-[320px] mt-auto hidden md:block mb-6"
+      src="/img/me.webp"
+      alt="Memoji of Fernando."
+      width="320"
+      height="320"
+    />
+  </div>
+</div>
