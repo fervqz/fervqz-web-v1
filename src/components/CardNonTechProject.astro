@@ -1,24 +1,54 @@
 ---
+import { Globe } from "lucide-astro";
+
 const { project } = Astro.props;
 ---
 
 <a
   href={project.href}
   target="_blank"
-  class="group flex flex-col h-full items-center text-white hover:cursor-pointer bg-elevated rounded-2xl overflow-hidden hover:bg-elevated-2 transition-colors"
+  aria-label={`Card that links to more info for ${project.title}.`}
+  class="group flex flex-col h-full items-center text-white hover:cursor-pointer bg-elevated rounded-3xl overflow-hidden transition-colors"
 >
-  <img
-    class="w-full max-h-60 object-cover relative z-0 group-hover:scale-110 transition-transform duration-200 ease-in-out"
-    src={project.img}
-    alt={project.title}
-    height="200px"
-    width="100%"
-  />
+  <span class="sr-only">Card that links to more info for {project.title}.</span>
+  <div class="relative w-full min-h-[20rem] group">
+    <video
+      class="object-cover min-h-full absolute inset-0 z-0 group-hover:scale-110 transition-transform duration-200 ease-in-out hidden group-hover:block"
+      autoplay
+      muted
+      loop
+    >
+      <source src={project.video} type="video/webm" />
+    </video>
+
+    <img
+      class="object-cover relative z-10 group-hover:scale-110 transition-all duration-500 ease-in-out group-hover:opacity-0"
+      src={project.img}
+      alt={project.title}
+      height="200px"
+      width="100%"
+      loading="lazy"
+    />
+  </div>
 
   <div
-    class="p-4 bg-elevated relative z-10 group-hover:bg-elevated-2 transition-colors"
+    class="flex flex-col gap-2 justify-between p-4 bg-elevated relative z-20 transition-colors"
   >
-    <h3 class="font-semibold text-xl mb-6">{project.title}</h3>
-    <p class="text-gray-400 text-start">{project.description}</p>
+    <h4 class="font-semibold text-xl">
+      {project.title}
+    </h4>
+
+    <div class="min-h-[6rem]">
+      <p class="text-gray-400">
+        {project.description}
+      </p>
+    </div>
+
+    <div
+      class="bg-elevated-2 p-2 rounded-full flex flex-row gap-2 justify-center items-center hover:bg-elevated-4 transition-colors"
+    >
+      <Globe size={18} />
+      <span class="uppercase text-xs font-semibold">explore</span>
+    </div>
   </div>
 </a>
