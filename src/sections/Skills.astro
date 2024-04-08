@@ -15,14 +15,17 @@ const SKILLS = [
 ];
 ---
 
-<div class="row-span-1 col-span-12 px-24 flex flex-row gap-4">
-  {
-    SKILLS.map((skill) => (
-      <img
-        class="hover:scale-110 transition-transform duration-50 ease-in-out"
-        src={`https://skillicons.dev/icons?i=${skill.slug}`}
-        alt={`Icon of ${skill.lalbel}`}
-      />
-    ))
-  }
-</div>
+<section class="container py-8">
+  <h1 class="text-4xl font-semibold mb-10">Skills</h1>
+  <div class="row-span-1 col-span-12 px-24 flex flex-row gap-4">
+    {
+      SKILLS.map((skill) => (
+        <img
+          class="hover:scale-110 transition-transform duration-50 ease-in-out"
+          src={`https://skillicons.dev/icons?i=${skill.slug}`}
+          alt={`Icon of ${skill.lalbel}`}
+        />
+      ))
+    }
+  </div>
+</section>
