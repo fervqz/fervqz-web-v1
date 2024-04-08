@@ -5,7 +5,12 @@ export default {
 		extend: {
 			colors: {
 				primary: 'rgb(10 10 10)',
-				'primary-darker': 'black'
+				'primary-darker': 'black',
+				'elevated': '#121212',
+				'elevated-2': '#222222',
+				'elevated-3': '#292929',
+				'elevated-4': '#444141',
+				'elevated-5': '#727272',
 			},
 			container: {
 				center: true,
@@ -13,9 +18,9 @@ export default {
 					DEFAULT: '1rem',
 					sm: '2rem',
 					md: '2rem',
-					lg: '20rem',
-					xl: '20rem',
-					'2xl': '20rem',
+					lg: '10rem',
+					xl: '10rem',
+					'2xl': '10rem',
 				},
 			},
 		},

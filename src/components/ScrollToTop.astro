@@ -1,0 +1,37 @@
+---
+import { ArrowUp } from "lucide-astro";
+---
+
+<div
+  id="btn-scroll-to-top"
+  class="fixed opacity-0 shadow-xl p-4 right-6 bottom-6 bg-white rounded-full size-12 flex justify-center items-center hover:scale-105 hover:cursor-pointer transition-opacity ease-in-out duration-500 z-50"
+>
+  <button>
+    <ArrowUp size={24} class="text-black" />
+  </button>
+</div>
+
+<script>
+  import { JAStream } from "@fervqz/just-a-stream";
+  const $btnScrollToTop = document.querySelector("#btn-scroll-to-top");
+  const breakpoint = window.innerHeight * 0.5;
+
+  $btnScrollToTop?.addEventListener("click", () => window.scrollTo({ top: 0 }));
+
+  const scrollStream = new JAStream((next) => {
+    window.addEventListener("scroll", () => {
+      next(window.scrollY);
+    });
+  });
+
+  scrollStream.subscribe((scrollY) => {
+    if ((scrollY as number) > breakpoint) {
+      console.log("scrolled");
+      $btnScrollToTop?.classList.remove("opacity-0");
+      $btnScrollToTop?.classList.add("opacity-100");
+    } else {
+      $btnScrollToTop?.classList.add("opacity-0");
+      $btnScrollToTop?.classList.remove("opacity-100");
+    }
+  });
+</script>

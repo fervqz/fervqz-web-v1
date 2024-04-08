@@ -1,22 +1,20 @@
-/* *::selection {
-  color: #f2f2f2;
-  background: black;
-} */
+*::selection {
+  color: black;
+  background: yellow;
+}
+
+* {
+  scroll-behavior: smooth;
+  font-family: "Jost Variable", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
 
 body {
   font-family: "DM Sans Variable", sans-serif;
-  background: #080808;
-  line-height: 26px;
-  letter-spacing: 1.2px;
+  background: black;
+  line-height: 20px;
+  letter-spacing: 1.3px;
   color: #e0e0e0;
   scroll-behavior: smooth;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #f7f7f7;
 }

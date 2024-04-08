@@ -1,7 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import NoiseBackground from "../components/NoiseBackground.astro";
-import LightsBackground from "../components/LightsBackground.astro";
+import ScrollToTop from "../components/ScrollToTop.astro";
 
 const title = "Fervqz | Developer";
 const description =
@@ -12,9 +11,8 @@ const description =
   <head>
     <BaseHead title={title} description={description} />
   </head>
-  <body>
-    <LightsBackground />
-    <NoiseBackground />
+  <body class="overflow-x-hidden">
     <slot />
+    <ScrollToTop />
   </body>
 </html>

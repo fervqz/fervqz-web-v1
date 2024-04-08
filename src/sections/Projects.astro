@@ -1,0 +1,64 @@
+---
+import { Github, Globe } from "lucide-astro";
+import CardProjects from "../components/CardProject.astro";
+
+const PROJECTS = [
+  {
+    title: "F1lmlog App",
+    description:
+      "Mobile app to keeps track of film camera settings when shooting film. Created with React Native.",
+    img: "/img/mockup-f1lmlog.png",
+    links: [
+      {
+        label: "view app",
+        href: "https://f1lmlog.com",
+        icon: Globe,
+      },
+    ],
+  },
+  {
+    title: "Metamor",
+    description:
+      "New landing page for Metamor projects improving performance, SEO and user interactions compared to old version.",
+    img: "/img/mockup-metamor.png",
+    links: [
+      {
+        label: "view app",
+        href: "https://metamorpsicologia.com/",
+        icon: Globe,
+      },
+    ],
+  },
+  {
+    title: "Case of Study: Spotify",
+    description:
+      "Clone of Spotify web app create  for studying it's design desicions, workarounds implemented and more.",
+    img: "/img/mockup-clonify.png",
+    links: [
+      {
+        label: "code",
+        href: "https://github.com/fervqz/spotify-clone",
+        icon: Github,
+      },
+      {
+        label: "view app",
+        href: "https://fv-spotify-study.netlify.app/",
+        icon: Globe,
+      },
+    ],
+  },
+];
+---
+
+<section id="projects" class="container py-8">
+  <h1 class="text-4xl font-semibold mb-10">Projects</h1>
+  <ul class="grid grid-cols-3 gap-4">
+    {
+      PROJECTS.map((project) => (
+        <li class="col-span-3 md:col-span-1">
+          <CardProjects project={project} />
+        </li>
+      ))
+    }
+  </ul>
+</section>

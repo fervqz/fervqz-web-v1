@@ -1,0 +1,38 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<nav class="container flex flex-row gap-2 items-center py-4 justify-center">
+  <ul class="flex-1 flex justify-center md:justify-start">
+    <li>
+      <Logo />
+    </li>
+  </ul>
+  <ul class="hidden md:block">
+    <li>
+      <a
+        href="/#experience"
+        class="text-gray-200 font-light hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg"
+        >Experience</a
+      >
+    </li>
+  </ul>
+  <ul class="hidden md:block">
+    <li>
+      <a
+        href="/#projects"
+        class="text-gray-200 font-light hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg"
+        >Projects</a
+      >
+    </li>
+  </ul>
+  <ul class="hidden md:block">
+    <li>
+      <a
+        href="/#non-tech-projects"
+        class="text-gray-200 font-light hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg"
+        >More</a
+      >
+    </li>
+  </ul>
+</nav>
