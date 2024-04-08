@@ -2,10 +2,10 @@
 import { Github, Linkedin, NotebookPen, ExternalLink } from "lucide-astro";
 ---
 
-<header class="container grid grid-cols-12 grid-rows-2 gap-4">
+<header class="container grid grid-cols-12 grid-rows-3 md:grid-rows-2 gap-4">
   <div
     id="hero--main-card"
-    class="col-span-8 row-span-2 bg-elevated rounded-3xl overflow-hidden"
+    class="col-span-12 row-span-1 md:col-span-8 md:row-span-2 bg-elevated rounded-3xl overflow-hidden"
   >
     <div class="flex flex-row h-full">
       <div class="w-full h-full pl-6 py-6 flex flex-col">
@@ -66,7 +66,7 @@ import { Github, Linkedin, NotebookPen, ExternalLink } from "lucide-astro";
       </div>
 
       <img
-        class="size-[320px] mt-auto"
+        class="size-[320px] mt-auto hidden md:block"
         src="/img/me.png"
         alt="Memoji of Fernando."
         width="320"
@@ -76,7 +76,7 @@ import { Github, Linkedin, NotebookPen, ExternalLink } from "lucide-astro";
   </div>
 
   <div
-    class="flex flex-col gap-4 col-span-4 row-span-1 bg-elevated rounded-3xl overflow-hidden p-4"
+    class="flex flex-col gap-4 col-span-12 md:col-span-4 row-span-1 bg-elevated rounded-3xl overflow-hidden p-4"
   >
     <h3 class="font-blod">About</h3>
     <p class="text-gray-400">
@@ -88,13 +88,13 @@ import { Github, Linkedin, NotebookPen, ExternalLink } from "lucide-astro";
     </p>
   </div>
   <div
-    class="flex flex-col col-span-2 row-span-1 bg-elevated rounded-3xl overflow-hidden p-4"
+    class="flex flex-col col-span-6 md:col-span-2 row-span-1 bg-elevated rounded-3xl overflow-hidden p-4"
   >
     <span class="text-center text-6xl font-semibold my-auto">+5</span>
     <span class="text-gray-400 text-center">years of experience</span>
   </div>
   <div
-    class="flex flex-col col-span-2 row-span-1 bg-elevated rounded-3xl overflow-hidden p-4"
+    class="flex flex-col col-span-6 md:col-span-2 row-span-1 bg-elevated rounded-3xl overflow-hidden p-4"
   >
     <span class="text-center text-6xl font-semibold my-auto">+60K</span>
     <span class="text-gray-400 text-center">users reached</span>
