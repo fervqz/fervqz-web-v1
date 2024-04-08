@@ -3,21 +3,18 @@ import "@fontsource-variable/jost";
 
 import Experience from "../sections/Experience.astro";
 import Footer from "../components/Footer.astro";
+import GridBackground from "../components/GridBackground.astro";
 import Hero from "../sections/Hero.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import NonTechProjects from "../sections/NonTechProjects.astro";
 import Projects from "../sections/Projects.astro";
+import Skills from "../sections/Skills.astro";
 ---
 
 <MainLayout>
   <main class="flex flex-col gap-12 md:gap-24 h-full">
-    <div class="absolute h-full w-full bg-black -z-10">
-      <div
-        class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#0828CF2e_1px,transparent_1px),linear-gradient(to_bottom,#0828CF2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
-      >
-      </div>
-    </div>
+    <GridBackground />
     <Navbar />
     <Hero />
     <Experience />
