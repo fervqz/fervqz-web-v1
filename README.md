@@ -1,7 +1,7 @@
 # Project for my personal website.
 
 <p align="center">
-    <img src="./public/img/me.png" width="200" />
+    <img src="./public/img/me.webp" width="200" />
 </p>
 
 ¡You can visit it [here](https://fervqz.com)! 
