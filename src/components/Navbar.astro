@@ -2,13 +2,13 @@
 import Logo from "./Logo.astro";
 ---
 
-<nav class="container flex flex-row gap-2 items-center py-4">
-  <ul class="flex-1">
+<nav class="container flex flex-row gap-2 items-center py-4 justify-center">
+  <ul class="flex-1 flex justify-center md:justify-start">
     <li>
       <Logo />
     </li>
   </ul>
-  <ul>
+  <ul class="hidden md:block">
     <li>
       <a
         href="/#experience"
@@ -17,7 +17,7 @@ import Logo from "./Logo.astro";
       >
     </li>
   </ul>
-  <ul>
+  <ul class="hidden md:block">
     <li>
       <a
         href="/#projects"
@@ -26,7 +26,7 @@ import Logo from "./Logo.astro";
       >
     </li>
   </ul>
-  <ul>
+  <ul class="hidden md:block">
     <li>
       <a
         href="/#non-tech-projects"
