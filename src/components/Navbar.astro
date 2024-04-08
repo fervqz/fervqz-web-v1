@@ -1,37 +1,43 @@
 ---
+import { useTranslation } from "../lib/useTranslation";
 import Logo from "./Logo.astro";
+
+const t = useTranslation();
 ---
 
-<nav class="container flex flex-row gap-2 items-center py-4 justify-center">
+<nav class="container flex flex-row gap-2 items-center py-6 justify-center">
   <ul class="flex-1 flex justify-center md:justify-start">
-    <li>
-      <Logo />
+    <li class="hover:scale-105 transition-transform duration-200 ease-in-out">
+      <a href="/">
+        <Logo />
+        <span class="sr-only">FERVQZ</span>
+      </a>
     </li>
   </ul>
   <ul class="hidden md:block">
-    <li>
+    <li class="hover:scale-105 transition-transform duration-200 ease-in-out">
       <a
         href="/#experience"
         class="text-gray-200 font-light hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg"
-        >Experience</a
+        >{t("nav.experience")}</a
       >
     </li>
   </ul>
   <ul class="hidden md:block">
-    <li>
+    <li class="hover:scale-105 transition-transform duration-200 ease-in-out">
       <a
         href="/#projects"
         class="text-gray-200 font-light hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg"
-        >Projects</a
+        >{t("nav.projects")}</a
       >
     </li>
   </ul>
   <ul class="hidden md:block">
-    <li>
+    <li class="hover:scale-105 transition-transform duration-200 ease-in-out">
       <a
         href="/#non-tech-projects"
         class="text-gray-200 font-light hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg"
-        >More</a
+        >{t("nav.more")}</a
       >
     </li>
   </ul>

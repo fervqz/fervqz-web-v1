@@ -1,6 +1,6 @@
 *::selection {
   color: black;
-  background: yellow;
+  background: #2bfa3c;
 }
 
 * {
@@ -17,4 +17,9 @@ body {
   letter-spacing: 1.3px;
   color: #e0e0e0;
   scroll-behavior: smooth;
+}
+
+b {
+  color: white;
+  font-weight: semibold;
 }

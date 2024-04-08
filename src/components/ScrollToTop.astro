@@ -6,8 +6,9 @@ import { ArrowUp } from "lucide-astro";
   id="btn-scroll-to-top"
   class="fixed opacity-0 shadow-xl p-4 right-6 bottom-6 bg-white rounded-full size-12 flex justify-center items-center hover:scale-105 hover:cursor-pointer transition-opacity ease-in-out duration-500 z-50"
 >
-  <button>
+  <button class="no-sr-only">
     <ArrowUp size={24} class="text-black" />
+    <span class="sr-only">Scroll to top</span>
   </button>
 </div>
 

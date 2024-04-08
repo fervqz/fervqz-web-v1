@@ -16,10 +16,7 @@ const { title, description, image = "/og-image.webp" } = Astro.props;
 
 <!-- Global Metadata -->
 <meta charset="utf-8" />
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
-/>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 
@@ -36,13 +33,13 @@ const { title, description, image = "/og-image.webp" } = Astro.props;
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content="https://fervqz.com/img/cover.png" />
+<meta property="og:image" content={new URL(image, Astro.url)} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content="https://fervqz.com/img/cover.png" />
+<meta property="twitter:image" content={new URL(image, Astro.url)} />
 
 <ViewTransitions />
