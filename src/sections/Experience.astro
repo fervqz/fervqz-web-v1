@@ -1,81 +1,71 @@
-<section id="experience" class="container hidden md:block py-8">
+---
+const EXPERIENCE = [
+  {
+    role: "Junior Full-Stack Developer",
+    company: "FUNIBER",
+    date: "Nov 2016 — Jul 2020",
+    activities: [
+      "<b>Reduced by 99.8% the application's time (from weeks to minutes)</b> for university certificates requests by implementing a responsive progressive web application with a bespoke business logic.",
+      "<b>Decreased, by 90%, errors caused by human intervention</b> on university certificates requests.",
+      "Developed a bookings management and issues tracker web application for a Students Residence, <b>decreasing by 60% of incorrect room assignments, improved issues solving 200% faster, and automation reports generation</b>.",
+    ],
+  },
+  {
+    role: "Full-Stack Developer",
+    company: "Diatomea Technology",
+    date: "Jul 2020 — Mar 2022",
+    activities: [
+      "<b>Reduced by 30% delivery times</b> by developing a serverless web application with AWS infrastructure for managing delivery routes and packages vehicles storage optimization for a supermarket chain.",
+      "Developed a mobile app for covid-19 tests results management, <b>boosting results registration by 300%</b> on a Public Health System.",
+      "Migrated a KPIs monitoring web app for an industrial wire manufacturing company, built with ReactJS (SPA) and migrated to NextJS (SSR) <b>improving its performance by 50%</b> on thin client operators devices.",
+    ],
+  },
+  {
+    role: "Full-Stack Developer",
+    company: "Softec Cloud",
+    date: "Mar 2022 — Jan 2024",
+    activities: [
+      "Developed  <b>over +35 NextJS/AngularJS websites with an average traffic of +50k users per month</b>.",
+      "Migrated the main contracting process for hiring electricity and gas services for a large company, from PHP to test-driven AngularJS web app, <b>resulting in a 10% increase in the annual revenue</b> for the business line.",
+      "Designed and developed a components library with ReactJS and TailwindCSS for unifying all design systems of each company's web application.",
+    ],
+  },
+];
+---
+
+<section id="experience" class="container py-8">
   <h1 class="text-4xl font-semibold mb-10">Work Experience</h1>
 
-  <div class="flex flex-row gap-2 px-40 justify-center">
-    <div class="flex flex-col gap-2 items-center pr-24">
-      <div class="size-3 min-w-3 min-h-3 rounded-full bg-white mt-2"></div>
-      <div class="h-full w-[1px] rounded-full bg-gray-100"></div>
-    </div>
-    <div class="min-w-fit mr-6">
-      <span class="text-gray-400">Nov 2016 — Jul 2020</span>
-    </div>
-    <div class="pb-24">
-      <h3 class="font-semibold mb-6 text-xl">
-        FUNIBER — Junior Full-Stack Web Developer
-      </h3>
+  {
+    EXPERIENCE.map((experience) => (
+      <div class="flex flex-row gap-2 px-2 md:px-10 justify-start md:justify-center">
+        <div class="flex flex-col gap-2 items-center p-0 md:pr-24">
+          <div class="size-3 min-w-3 min-h-3 rounded-full bg-white mt-2" />
+          <div class="h-full w-[1px] rounded-full bg-gray-100" />
+        </div>
+        <div class="grid grid-cols-12 gap-6">
+          <div class="min-w-fit col-span-12 md:col-span-3 w-full md:text-end pt-1">
+            <span class="text-gray-400 ml-auto">{experience.date}</span>
+          </div>
+          <div class="pb-16 col-span-12 md:col-span-9">
+            <h3 class="font-semibold mb-6 text-xl">
+              {experience.company} — {experience.role}
+            </h3>
 
-      <ul class="list-disc flex flex-col gap-4 ml-10 text-gray-400">
-        <li>
-          Successfully designed and developed T.N.T, a system for university
-          degree processes's management, redefining business processes and
-          <span class="font-semibold text-white"
-            >reducing application time by x500, from weeks to minutes</span
-          >.
-        </li>
-        <li>
-          Significantly <span class="font-semibold text-white"
-            >decreased errors caused by human intervention by 90%</span
-          >, enhancing system reliability and accuracy using T.N.T.
-        </li>
-        <li>
-          Implemented a bookings management and issues tracker web application
-          for Universidad Europea del Atlántico's Students Residence, <span
-            class="font-semibold text-white"
-            >decreasing by 60% of incorrect room assignments, solving hosts
-            issues 50% faster</span
-          >, and automation reports generation.
-        </li>
-      </ul>
-    </div>
-  </div>
+            <ul class="list-disc flex flex-col gap-4 ml-10 text-gray-400">
+              {experience.activities.map((activity) => (
+                <li>
+                  <span set:html={activity} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    ))
+  }
 
-  <div class="flex flex-row gap-2 px-40">
-    <div class="flex flex-col gap-2 items-center pr-24">
-      <div class="size-3 min-w-3 min-h-3 rounded-full bg-white mt-2"></div>
-      <div class="h-full w-[1px] rounded-full bg-gray-100"></div>
-    </div>
-    <div class="min-w-fit mr-6">
-      <span class="text-gray-400">Jul 2020 — Jan 2024</span>
-    </div>
-    <div class="pb-24">
-      <h3 class="font-semibold mb-6 text-xl">
-        Softec Cloud — Full-Stack Web Developer
-      </h3>
-
-      <ul class="list-disc flex flex-col gap-4 ml-10 text-gray-400">
-        <li>
-          <span class="font-semibold text-white"
-            >Reduced, by 30% in average, the delivery time in packages delivery</span
-          > for a supermarket company by implementing a management dashboard and
-          optimal route generator system.
-        </li>
-        <li>
-          Created and deployed <span class="font-semibold text-white"
-            >over +30 static web applications with a traffic of +50k users
-            monthly</span
-          > for Repsol Luz y Gas, ensuring lead generation, managing contract updates
-          requests and implementing new business logics for existing user’s contracts.
-        </li>
-        <li>
-          Contribute to the creation of Cañía, a mobile app for Covid results
-          registration, <span class="font-semibold text-white"
-            >boosting efficiency and a significantly reduction of errors</span
-          > on Catabria's Public Health System resutls’s registration processes.
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="flex flex-row gap-2 px-40">
+  <div class="flex flex-row gap-2 px-2 md:px-10">
     <span class="text-xl relative -left-1">👀</span>
   </div>
 </section>
