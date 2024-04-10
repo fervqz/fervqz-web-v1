@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.10",
+    "@astrojs/netlify": "^5.2.0",
     "@astrojs/tailwind": "^5.1.0",
     "@fervqz/just-a-stream": "^1.0.3",
     "@fontsource-variable/dm-sans": "^5.0.4",
