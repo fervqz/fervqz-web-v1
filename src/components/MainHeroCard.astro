@@ -28,8 +28,17 @@ const USEFUL_LINKS = [
   class="col-span-12 row-span-1 md:col-span-8 md:row-span-2 border-[1px] bg-elevated-2 bg-gradient-to-tr from-elevated to-[#0a2a54] border-slate-800 rounded-3xl overflow-hidden"
 >
   <div class="flex flex-row h-full">
-    <div class="w-full h-full pl-6 py-6 flex flex-col">
-      <div class="flex-1 flex flex-col justify-center">
+    <div class="w-full h-full pl-6 pr-6 md:pr-0 py-6 flex flex-col">
+      <div
+        class="flex-1 flex flex-col justify-center items-center gap-4 md:items-start md:gap-1"
+      >
+        <img
+          class="size-[300px] block md:hidden mb-6"
+          src="/img/me.webp"
+          alt="Memoji of Fernando."
+          width="320"
+          height="320"
+        />
         <h1 class="font-semibold text-4xl text-white">{t("hero.title1")}</h1>
         <h1 class="font-semibold text-4xl text-white">
           {t("hero.title2")}
@@ -41,16 +50,16 @@ const USEFUL_LINKS = [
         <h2 class="font-light mt-4 text-2xl">{t("hero.subtitle")}</h2>
       </div>
 
-      <ul class="flex flex-row gap-4 mt-4 text-black">
+      <ul class="flex flex-col md:flex-row gap-4 mt-4 text-black">
         {
           USEFUL_LINKS.map((link) => {
             const Icon = link.icon;
             return (
-              <li class="bg-gray-50 py-2 px-4 rounded-lg w-fit text-sm font-blod hover:scale-105 hover:bg-white hover:pointer-cursor transition-transform">
+              <li class="w-ful md:w-fit bg-gray-50 py-2 px-4 rounded-lg text-sm font-blod hover:scale-105 hover:bg-white hover:pointer-cursor transition-transform">
                 <a
                   href={link.url}
                   target="_blank"
-                  class="flex flex-row gap-2 items-center font-normal"
+                  class="flex flex-row gap-2 items-center justify-center md:justify-start font-normal p-2 md:p-0"
                 >
                   <Icon size={18} />
                   {link.name}
