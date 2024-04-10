@@ -5,4 +5,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: 'https://localhost:4321',
   integrations: [tailwind()],
+  output: 'server',
 });
