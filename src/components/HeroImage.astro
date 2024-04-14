@@ -1,0 +1,130 @@
+---
+import SKILLS from "../constants/skills";
+---
+
+<div class="relative min-h-[12rem] min-w-[12rem] mb-28">
+  {
+    SKILLS.map((skill) => (
+      <img
+        class="img-rotate"
+        src={`https://skillicons.dev/icons?i=${skill.slug}`}
+        alt={`Icon of ${skill.lalbel}`}
+        role="presentation"
+        height="70px"
+        width="70px"
+      />
+    ))
+  }
+
+  <div class="absolute inset-0 min-h-[12rem] min-w-[12rem] z-10">
+    <img
+      src="/img/me.webp"
+      alt="Memoji of Fernando."
+      width="300px"
+      height="300px"
+    />
+  </div>
+</div>
+
+<script>
+  import { $$ } from "../lib/querySelector";
+  $$("img.img-rotate").forEach((el, i) => {
+    el.style.animationDelay = `${i * 830}ms`;
+  });
+</script>
+
+<style>
+  .img-rotate {
+    --anim-speed: 5s;
+    position: absolute;
+    animation: img-rotate calc(var(--anim-speed) * 2) linear infinite;
+    transition: var(--anim-speed) linear;
+    z-index: 0;
+    bottom: -20px;
+    left: calc(50% - 35px);
+  }
+
+  @keyframes img-rotate {
+    0% {
+      transform: translate3d(0px, -70px, 0px);
+      scale: 0.5;
+      z-index: 0;
+    }
+    10% {
+      transform: translate3d(150px, -35px, 0px);
+      scale: 0.6;
+      z-index: 10;
+    }
+    20% {
+      transform: translate3d(300px, 0px, 0px);
+      scale: 0.7;
+      z-index: 20;
+    }
+    30% {
+      transform: translate3d(200px, 50px, 0px);
+      scale: 0.8;
+      z-index: 25;
+    }
+    40% {
+      transform: translate3d(100px, 100px, 0px);
+      scale: 0.9;
+      z-index: 28;
+    }
+    50% {
+      transform: translate3d(0px, 100px, 0px);
+      scale: 1;
+      z-index: 30;
+    }
+    60% {
+      transform: translate3d(-100px, 100px, 0px);
+      scale: 0.9;
+      z-index: 28;
+    }
+    70% {
+      transform: translate3d(-200px, 50px, 0px);
+      scale: 0.8;
+      z-index: 25;
+    }
+    80% {
+      transform: translate3d(-300px, 0px, 0px);
+      scale: 0.7;
+      z-index: 20;
+    }
+    90% {
+      transform: translate3d(-150px, -35px, 0px);
+      scale: 0.6;
+      z-index: 10;
+    }
+    100% {
+      transform: translate3d(0px, -70px, 0px);
+      scale: 0.5;
+      z-index: 0;
+    }
+  }
+
+  @media (max-width: 1250px) {
+    @keyframes img-rotate {
+      0% {
+        transform: translate3d(0px, -70px, 0px);
+        scale: 0.5;
+        z-index: 0;
+      }
+      25% {
+        transform: translate3d(200px, 0px, 0px);
+      }
+      50% {
+        transform: translate3d(0px, 100px, 0px);
+        scale: 1;
+        z-index: 30;
+      }
+      75% {
+        transform: translate3d(-200px, -0px, 0px);
+      }
+      100% {
+        transform: translate3d(0px, -70px, 0px);
+        scale: 0.5;
+        z-index: 0;
+      }
+    }
+  }
+</style>
