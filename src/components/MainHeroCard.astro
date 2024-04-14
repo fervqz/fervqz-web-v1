@@ -1,26 +1,9 @@
 ---
-import { Github, Linkedin, NotebookPen, ExternalLink } from "lucide-astro";
+import { ExternalLink } from "lucide-astro";
 import { useTranslation } from "../lib/useTranslation";
+import USEFUL_LINKS from "../constants/usefulLinks";
 
 const t = useTranslation();
-
-const USEFUL_LINKS = [
-  {
-    name: "GitHub",
-    url: import.meta.env.PUBLIC_URL_GITHUB,
-    icon: Github,
-  },
-  {
-    name: "LinkedIn",
-    url: import.meta.env.PUBLIC_URL_LINKEDIN,
-    icon: Linkedin,
-  },
-  {
-    name: "Blog",
-    url: import.meta.env.PUBLIC_URL_BLOG,
-    icon: NotebookPen,
-  },
-];
 ---
 
 <div

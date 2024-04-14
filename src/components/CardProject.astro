@@ -4,25 +4,35 @@ import type { ProjectLink } from "../types/project.d";
 const { project } = Astro.props;
 ---
 
-<div class="group rounded-3xl overflow-hidden">
+<div class="group rounded-3xl overflow-hidden select-none">
   <img
-    class="relative group-hover:scale-110 transition-all duration-200 ease-in-out z-0"
+    class="relative
+  md:group-hover:scale-110
+  transition-all
+  duration-200
+  ease-in-out
+  z-0"
     src={project.img}
     alt="Mockup of F1lmlog app."
     width="100%"
     height="300px"
     loading="lazy"
+    draggable="false"
   />
 
-  <div class="relative p-6 flex flex-col gap-4 bg-elevated z-10">
+  <div class="relative p-6 flex flex-col gap-4 bg-elevated z-10 min-h-[17rem]">
     <h4 class="font-semibold text-xl">{project.title}</h4>
-    <p class="text-gray-400 flex-1 mb-12">{project.description}</p>
-    <ul class="flex flex-row gap-2">
+
+    <p class="text-gray-400 mb-12 min-h-full">
+      {project.description}
+    </p>
+
+    <ul class="flex flex-col md:flex-row gap-2 mt-auto">
       {
         project.links.map((link: ProjectLink) => {
           const Icon = link.icon;
           return (
-            <li class="group bg-elevated-2 p-2 text-center rounded-full flex-1 hover:bg-elevated-4 transition-colors">
+            <li class="group bg-elevated-2 p-4 text-center rounded-full flex-1 hover:bg-elevated-4 transition-colors">
               <a
                 href={link.href}
                 target="_blank"
