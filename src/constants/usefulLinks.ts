@@ -4,17 +4,17 @@ const USEFUL_LINKS = [
   {
     name: "LinkedIn",
     url: import.meta.env.PUBLIC_URL_LINKEDIN,
-    icon: Linkedin,
+    icon: "mdi:linkedin",
   },
     {
       name: "GitHub",
       url: import.meta.env.PUBLIC_URL_GITHUB,
-      icon: Github,
+      icon: "mdi:github",
     },
     // {
     //   name: "Blog",
     //   url: import.meta.env.PUBLIC_URL_BLOG,
-    //   icon: NotebookPen,
+    //   icon: "mdi:note-edit-outline",
     // },
   ];
 

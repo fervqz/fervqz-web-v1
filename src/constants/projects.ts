@@ -1,5 +1,3 @@
-import { Github, Globe,Package } from "lucide-astro";
-
 const PROJECTS = [
     {
       title: "F1lmlog App",
@@ -10,7 +8,7 @@ const PROJECTS = [
         {
           label: "view app",
           href: "https://f1lmlog.com",
-          icon: Globe,
+          icon: "mdi:web",
         },
       ],
     },
@@ -23,7 +21,7 @@ const PROJECTS = [
         {
           label: "view app",
           href: "https://metamorpsicologia.com/",
-          icon: Globe,
+          icon: "mdi:web",
         },
       ],
     },
@@ -36,12 +34,12 @@ const PROJECTS = [
         {
           label: "source code",
           href: "https://github.com/fervqz/just-a-stream",
-          icon: Github,
+          icon: "mdi:github",
         },
         {
           label: "NPM Package",
           href: "https://www.npmjs.com/package/@fervqz/just-a-stream",
-          icon: Package,
+          icon: "mdi:package-variant-closed",
         },
       ],
     },
@@ -54,12 +52,12 @@ const PROJECTS = [
         {
           label: "source code",
           href: "https://github.com/fervqz/spotify-clone",
-          icon: Github,
+          icon: "mdi:github",
         },
         {
           label: "view app",
           href: "https://fv-spotify-study.netlify.app/",
-          icon: Globe,
+          icon: "mdi:web",
         },
       ],
     },
