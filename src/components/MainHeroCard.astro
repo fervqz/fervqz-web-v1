@@ -1,5 +1,5 @@
 ---
-import { ExternalLink } from "lucide-astro";
+import { Icon } from "astro-icon/components";
 import { useTranslation } from "../lib/useTranslation";
 import USEFUL_LINKS from "../constants/usefulLinks";
 
@@ -36,7 +36,6 @@ const t = useTranslation();
       <ul class="flex flex-col md:flex-row gap-4 mt-4 text-black">
         {
           USEFUL_LINKS.map((link) => {
-            const Icon = link.icon;
             return (
               <li class="w-ful md:w-fit bg-gray-50 py-2 px-4 rounded-lg text-sm font-blod hover:scale-105 hover:bg-white hover:pointer-cursor transition-transform">
                 <a
@@ -44,9 +43,9 @@ const t = useTranslation();
                   target="_blank"
                   class="flex flex-row gap-2 items-center justify-center md:justify-start font-normal p-2 md:p-0"
                 >
-                  <Icon size={18} />
+                  <Icon name={link.icon} size={18} />
                   {link.name}
-                  <ExternalLink size={18} />
+                  <Icon name="mdi:open-in-new" size={18} />
                 </a>
               </li>
             );
