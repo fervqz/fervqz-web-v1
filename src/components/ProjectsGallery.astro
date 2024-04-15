@@ -1,5 +1,5 @@
 ---
-import { ArrowLeft, ArrowRight } from "lucide-astro";
+import { Icon } from "astro-icon/components";
 import CardProjects from "./CardProject.astro";
 import PROJECTS from "../constants/projects";
 ---
@@ -27,13 +27,13 @@ import PROJECTS from "../constants/projects";
           id="btn-left"
           class="cursor-pointer aspect-square p-4 bg-elevated-2 text-gray-400 text-xl rounded-full flex justify-center items-center hover:bg-elevated-3 hover:text-gray-200"
         >
-          <ArrowLeft size={32} />
+          <Icon name="mdi:arrow-left" size={32} />
         </div>
         <div
           id="btn-right"
           class="cursor-pointer aspect-square p-4 bg-elevated-2 text-gray-400 text-xl rounded-full flex justify-center items-center hover:bg-elevated-3 hover:text-gray-200"
         >
-          <ArrowRight size={32} />
+          <Icon name="mdi:arrow-right" size={32} />
         </div>
       </div>
     )
@@ -92,10 +92,10 @@ import PROJECTS from "../constants/projects";
   }
 
   #gallery::-webkit-scrollbar-thumb {
-    border: 4px solid black;
+    border: 4px solid transparent;
     background-clip: padding-box;
     border-radius: 9999px;
-    background-color: black;
+    background-color: transparent;
     margin-left: 10rem;
   }
 </style>

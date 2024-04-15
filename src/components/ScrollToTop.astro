@@ -1,5 +1,5 @@
 ---
-import { ArrowUp } from "lucide-astro";
+import { Icon } from "astro-icon/components";
 ---
 
 <div
@@ -7,14 +7,16 @@ import { ArrowUp } from "lucide-astro";
   class="fixed opacity-0 shadow-xl p-4 right-6 bottom-6 bg-white rounded-full size-12 flex justify-center items-center hover:scale-105 hover:cursor-pointer transition-opacity ease-in-out duration-500 z-50"
 >
   <button class="no-sr-only">
-    <ArrowUp size={24} class="text-black" />
+    <Icon name="mdi:arrow-up" size={24} class="text-black" />
     <span class="sr-only">Scroll to top</span>
   </button>
 </div>
 
 <script>
   import { JAStream } from "@fervqz/just-a-stream";
-  const $btnScrollToTop = document.querySelector("#btn-scroll-to-top");
+  import { $ } from "../lib/querySelector";
+
+  const $btnScrollToTop = $("#btn-scroll-to-top");
   const breakpoint = window.innerHeight * 0.5;
 
   $btnScrollToTop?.addEventListener("click", () => window.scrollTo({ top: 0 }));

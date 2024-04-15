@@ -14,11 +14,9 @@
     "@astrojs/netlify": "^5.2.0",
     "@astrojs/tailwind": "^5.1.0",
     "@fervqz/just-a-stream": "^1.0.3",
-    "@fontsource-variable/dm-sans": "^5.0.4",
-    "@fontsource-variable/jost": "^5.0.18",
-    "@midudev/tailwind-animations": "^0.0.7",
+    "@iconify-json/mdi": "^1.1.66",
     "astro": "^4.5.9",
-    "lucide-astro": "^0.363.0",
+    "astro-icon": "^1.1.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.4.3"
   }

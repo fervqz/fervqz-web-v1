@@ -1,5 +1,5 @@
 ---
-import { ExternalLink, ChevronsDown } from "lucide-astro";
+import { Icon } from "astro-icon/components";
 import USEFUL_LINKS from "../constants/usefulLinks";
 import { useTranslation } from "../lib/useTranslation";
 import HeroImage from "../components/HeroImage.astro";
@@ -7,11 +7,12 @@ import HeroImage from "../components/HeroImage.astro";
 const t = useTranslation();
 ---
 
-<header class="container flex flex-col gap-8 items-center">
+<header class="container flex flex-col gap-8 items-center pt-16">
   <HeroImage />
-  <div class="flex flex-col gap-2 items-center">
-    <h1 class="text-5xl md:text-6xl font-semibold">{t("hero.title1")}</h1>
+  <div class="flex flex-col gap-8 items-center">
     <h1 class="text-5xl md:text-6xl font-semibold text-center">
+      {t("hero.title1")}
+      <br />
       {t("hero.title2")}
       <span id="my-name" class="text-5xl md:text-6xl font-semibold"
         >{t("hero.title3")}</span
@@ -24,17 +25,14 @@ const t = useTranslation();
   >
     {
       USEFUL_LINKS.map((link) => {
-        const Icon = link.icon;
         return (
-          <li class="w-full md:w-fit bg-gray-50 py-4 px-6 rounded-lg text-sm font-blod hover:scale-105 hover:bg-white hover:pointer-cursor transition-transform">
-            <a
-              href={link.url}
-              target="_blank"
-              class="flex flex-row gap-2 items-center justify-center md:justify-start font-normal p-2 md:p-0"
-            >
-              <Icon size={18} />
-              {link.name}
-              <ExternalLink size={18} />
+          <li>
+            <a href={link.url} target="_blank">
+              <div class="text-black bg-gray-200 px-6 py-4 rounded-lg flex flex-row gap-2 justify-center items-center hover:bg-white hover:pointer-cursor hover:scale-105 transition-all duration-200">
+                <Icon name={link.icon} size={18} class="stroke-black" />
+                {link.name}
+                <Icon name="mdi:open-in-new" size={18} />
+              </div>
             </a>
           </li>
         );
@@ -42,7 +40,7 @@ const t = useTranslation();
     }
   </ul>
 
-  <ChevronsDown size={32} class="animate-bounce" />
+  <Icon name="mdi:chevron-double-down" size={32} class="animate-bounce" />
 </header>
 
 <style>
