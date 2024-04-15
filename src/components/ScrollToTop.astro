@@ -13,7 +13,6 @@ import { Icon } from "astro-icon/components";
 </div>
 
 <script>
-  import { JAStream } from "@fervqz/just-a-stream";
   import { $ } from "../lib/querySelector";
 
   const $btnScrollToTop = $("#btn-scroll-to-top");
@@ -21,14 +20,8 @@ import { Icon } from "astro-icon/components";
 
   $btnScrollToTop?.addEventListener("click", () => window.scrollTo({ top: 0 }));
 
-  const scrollStream = new JAStream((next) => {
-    window.addEventListener("scroll", () => {
-      next(window.scrollY);
-    });
-  });
-
-  scrollStream.subscribe((scrollY) => {
-    if ((scrollY as number) > breakpoint) {
+  document.addEventListener("scroll", () => {
+    if (window.scrollY > breakpoint) {
       $btnScrollToTop?.classList.remove("opacity-0");
       $btnScrollToTop?.classList.add("opacity-100");
     } else {
