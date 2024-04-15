@@ -1,5 +1,3 @@
-import { Github, Linkedin, NotebookPen } from "lucide-astro";
-
 const USEFUL_LINKS = [
   {
     name: "LinkedIn",
