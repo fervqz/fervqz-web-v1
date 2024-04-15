@@ -14,5 +14,11 @@ const description =
   <body class="overflow-x-hidden">
     <slot />
     <ScrollToTop />
-  </body>
+  </body><script>
+    import { $ } from "../lib/querySelector";
+    const $html = $("html");
+    window.addEventListener("load", () => {
+      $html.style.scrollBehavior = "smooth";
+    });
+  </script>
 </html>
