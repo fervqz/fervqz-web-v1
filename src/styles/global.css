@@ -1,25 +1,33 @@
+@font-face {
+  font-family: "Satoshi-Variable";
+  src: url("/fonts/Satoshi-Variable.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 *::selection {
   color: black;
   background: #2bfa3c;
 }
 
 * {
-  font-family: "Jost Variable", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
+  font-family: "Satoshi-Variable", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "DM Sans Variable", sans-serif;
   background: black;
-  line-height: 20px;
-  letter-spacing: 1.3px;
+  line-height: 1.5rem;
+  letter-spacing: 1.2px;
+  font-size: 16px;
+  font-weight: 300;
   color: #e0e0e0;
   overflow-x: none;
   max-width: 100%;
 }
 
-b {
-  color: white;
-  font-weight: semibold;
+h1 {
+  line-height: 1.2rem;
+  letter-spacing: -0.5px;
 }
