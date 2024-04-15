@@ -1,44 +1,71 @@
 ---
 import { useTranslation } from "../lib/useTranslation";
+import { Icon } from "astro-icon/components";
 import Logo from "./Logo.astro";
 
 const t = useTranslation();
 ---
 
-<nav class="container flex flex-row gap-2 items-center pt-6 justify-center">
-  <ul class="flex-1 flex justify-center md:justify-start">
-    <li class="hover:scale-105 transition-transform duration-200 ease-in-out">
-      <a href="/">
-        <Logo />
-        <span class="sr-only">FERVQZ</span>
-      </a>
-    </li>
-  </ul>
-  <ul class="hidden md:block">
-    <li class="hover:scale-105 transition-transform duration-200 ease-in-out">
-      <a
-        href="/#experience"
-        class="text-gray-200 font-light hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg"
-        >{t("nav.experience")}</a
-      >
-    </li>
-  </ul>
-  <ul class="hidden md:block">
-    <li class="hover:scale-105 transition-transform duration-200 ease-in-out">
-      <a
-        href="/#projects"
-        class="text-gray-200 font-light hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg"
-        >{t("nav.projects")}</a
-      >
-    </li>
-  </ul>
-  <ul class="hidden md:block">
-    <li class="hover:scale-105 transition-transform duration-200 ease-in-out">
-      <a
-        href="/#non-tech-projects"
-        class="text-gray-200 font-light hover:bg-slate-800 transition-colors px-3 py-1 rounded-lg"
-        >{t("nav.more")}</a
-      >
-    </li>
-  </ul>
+<nav
+  class="sticky top-0 z-50 bg-[#0a0122] backdrop-blur-2xl bg-opacity-0 backdrop-opacity-0 transition-all duration-700 ease-in-out"
+>
+  <div class="container flex flex-row gap-2 items-center py-2 justify-between">
+    <span class="hover:scale-105 transition-transform duration-200 ease-in-out">
+      <Logo />
+      <span class="sr-only">FERVQZ</span>
+    </span>
+
+    <ul class="flex flex-row gap-0 items-center relative -right-3 md:-right-0">
+      <li>
+        <a
+          href={import.meta.env.PUBLIC_URL_LINKEDIN}
+          target="_blank"
+          class="group"
+        >
+          <div
+            class="p-3 transition-transform duration-200 ease-in-out hover:scale-105 hover:cursor-pointer rounded-full hover:bg-slate-800"
+          >
+            <Icon
+              name="mdi:linkedin"
+              size={24}
+              class="group-hover:text-white"
+            />
+          </div>
+        </a>
+      </li>
+      <li>
+        <a
+          href={import.meta.env.PUBLIC_URL_GITHUB}
+          target="_blank"
+          class="group"
+        >
+          <div
+            class="p-3 transition-transform duration-200 ease-in-out hover:scale-105 hover:cursor-pointer rounded-full hover:bg-slate-800"
+          >
+            <Icon name="mdi:github" size={24} class="group-hover:text-white" />
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
+
+<script>
+  import { $ } from "../lib/querySelector";
+  const $nav = $("nav");
+
+  document.addEventListener("scroll", () => {
+    const breakpoint = 75;
+    let isPastBreakpoint = window.scrollY >= breakpoint;
+
+    if (!isPastBreakpoint && window.scrollY < breakpoint) {
+      isPastBreakpoint = false;
+      $nav.classList.remove(`backdrop-opacity-100`, `bg-opacity-70`);
+      $nav.classList.add("backdrop-opacity-0", "bg-opacity-0");
+    } else if (isPastBreakpoint && window.scrollY >= breakpoint) {
+      isPastBreakpoint = true;
+      $nav.classList.remove("backdrop-opacity-0", "bg-opacity-0");
+      $nav.classList.add(`backdrop-opacity-100`, `bg-opacity-70`);
+    }
+  });
+</script>
