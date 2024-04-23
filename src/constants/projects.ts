@@ -4,6 +4,7 @@ const PROJECTS = [
       description:
         "Mobile app to keeps track of film camera settings when shooting film. Created with React Native.",
       img: "/img/mockup-f1lmlog.webp",
+      defaultLink: "https://f1lmlog.com",
       links: [
         {
           label: "view app",
@@ -17,6 +18,7 @@ const PROJECTS = [
       description:
         "New landing page for Metamor projects improving performance, SEO and user interactions compared to old version.",
       img: "/img/mockup-metamor.webp",
+      defaultLink: "https://metamorpsicologia.com/",
       links: [
         {
           label: "view app",
@@ -30,6 +32,7 @@ const PROJECTS = [
       description:
         "A light weight JavaScript library for creating, transforming and merging streams.",
       img: "/img/mockup-jas.webp",
+      defaultLink: "https://github.com/fervqz/just-a-stream",
       links: [
         {
           label: "source code",
@@ -48,6 +51,7 @@ const PROJECTS = [
       description:
         "Clone of Spotify web app create  for studying it's design desicions, workarounds implemented and more.",
       img: "/img/mockup-clonify.webp",
+      defaultLink: "https://fv-spotify-study.netlify.app/",
       links: [
         {
           label: "source code",

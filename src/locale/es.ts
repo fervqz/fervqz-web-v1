@@ -14,6 +14,6 @@ export default {
     "hero.aboutDescription1": "Desarrollador web Full-Stack enfocado a crear experiencias inmersivas para los usuarios",
     "hero.aboutDescription2": "Certificado <b>AWS Cloud Practitioner</b>.",
     "hero.yearsOfExperience": "años de experiencia",
-    "hero.usersreached": "usuarios alcanzados",
+    "hero.usersReached": "usuarios alcanzados",
 
 }

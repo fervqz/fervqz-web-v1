@@ -21,7 +21,9 @@ const { project } = Astro.props;
     draggable="false"
   />
 
-  <div class="relative p-6 flex flex-col gap-4 bg-elevated z-10 min-h-[17rem]">
+  <div
+    class="relative p-6 flex flex-col gap-4 bg-elevated z-10 min-h-[17rem] group-hover:bg-elevated-2 transition-colors"
+  >
     <h class="font-semibold text-xl">{project.title}</h>
 
     <p class="text-gray-400 mb-12 min-h-full">
@@ -32,7 +34,7 @@ const { project } = Astro.props;
       {
         project.links.map((link: ProjectLink) => {
           return (
-            <li class="group bg-elevated-2 text-center rounded-full flex-1 hover:bg-elevated-4 transition-colors">
+            <li class="group bg-elevated-2 text-center rounded-full flex-1 group-hover:bg-elevated-4 transition-colors">
               <a
                 href={link.href}
                 target="_blank"

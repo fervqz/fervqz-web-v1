@@ -14,6 +14,6 @@ export default {
     "hero.aboutDescription1": "Full-Stack Web Developer with a keen eye for design and a knack for crafting immersive user experiences.",
     "hero.aboutDescription2": "<b>AWS Cloud Practitioner</b> certified.",
     "hero.yearsOfExperience": "years of experience",
-    "hero.usersreached": "users reached",
+    "hero.usersReached": "users reached",
 
 }
