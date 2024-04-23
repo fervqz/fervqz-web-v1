@@ -6,17 +6,24 @@ import EXPERIENCE from "../constants/experience";
   <h1 class="text-4xl font-semibold mb-10">Work Experience</h1>
 
   {
-    EXPERIENCE.map((experience) => (
-      <div class="flex flex-row gap-2 px-2 md:px-10 justify-start md:justify-center">
-        <div class="flex flex-col gap-2 items-center p-0 md:pr-24">
+    EXPERIENCE.map((experience, i) => (
+      <div class="grid grid-cols-12 gap-2 px-2 justify-start md:justify-center">
+        <div class="col-span-3 flex flex-col items-end ">
+          <img class="md:max-w-36" src={experience.img} alt="Work Experience" />
+        </div>
+
+        <div class="col-span-1 flex flex-col gap-2 items-center p-0 justify-end">
           <div class="size-3 min-w-3 min-h-3 rounded-full bg-white mt-2" />
           <div class="h-full w-[1px] rounded-full bg-gray-100" />
+          {i === EXPERIENCE.length - 1 && (
+            <span class="text-xl relative">👀</span>
+          )}
         </div>
-        <div class="grid grid-cols-12 gap-6">
-          <div class="min-w-fit col-span-12 md:col-span-3 w-full md:text-end pt-1">
+
+        <div class="col-span-8 flex flex-col gap-6 mb-12">
+          <div class="pb-16">
             <span class="text-gray-400 ml-auto">{experience.date}</span>
-          </div>
-          <div class="pb-16 col-span-12 md:col-span-9">
+
             <h3 class="font-semibold mb-6 text-xl">
               {experience.company} — {experience.role}
             </h3>
@@ -33,8 +40,4 @@ import EXPERIENCE from "../constants/experience";
       </div>
     ))
   }
-
-  <div class="flex flex-row gap-2 px-2 md:px-10">
-    <span class="text-xl relative -left-1">👀</span>
-  </div>
 </section>
