@@ -32,14 +32,17 @@ const isMobileBrowser = () => {
   <div class="relative w-full min-h-[20rem] group">
     {
       !isMobileBrowser() && (
-        <video
-          class="object-cover min-h-full absolute inset-0 z-0 group-hover:scale-110 transition-transform duration-200 ease-in-out hidden md:group-hover:block"
-          autoplay
-          muted
-          loop
-        >
-          <source src={project.video} type="video/webm" />
-        </video>
+        <>
+          <video
+            class="object-cover min-h-full absolute inset-0 z-0 group-hover:scale-110 transition-transform duration-200 ease-in-out hidden md:group-hover:block"
+            autoplay
+            muted
+            loop
+          >
+            <source src={project.video} type="video/webm" />
+            <source src={project.img} type="image/webp" />
+          </video>
+        </>
       )
     }
 
