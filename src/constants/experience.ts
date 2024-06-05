@@ -1,8 +1,8 @@
 const EXPERIENCE = [
     {
-      role: "Junior Full-Stack Developer",
+      role: "Junior Software Engineer",
       company: "FUNIBER",
-      date: "Nov 2016 — Jul 2020",
+      date: "Nov 2016 — Jul 2018",
       img: "/img/logo-funiber.webp",
       activities: [
         "<b>Reduced by 99.8% the application's time (from weeks to minutes)</b> for university certificates requests by implementing a responsive progressive web application with a bespoke business logic.",
@@ -11,9 +11,9 @@ const EXPERIENCE = [
       ],
     },
     {
-      role: "Full-Stack Developer",
+      role: "Software Engineer",
       company: "Diatomea Technology",
-      date: "Jul 2020 — Mar 2022",
+      date: "Jul 2018 — Mar 2022",
       img: "/img/logo-diatomea.webp",
       activities: [
         "<b>Reduced by 30% delivery times</b> by developing a serverless web application with AWS infrastructure for managing delivery routes and packages vehicles storage optimization for a supermarket chain.",
@@ -22,7 +22,7 @@ const EXPERIENCE = [
       ],
     },
     {
-      role: "Full-Stack Developer",
+      role: "Software Engineer",
       company: "Softec Cloud",
       date: "Mar 2022 — Jan 2024",
       img: "/img/logo-softec.webp",
