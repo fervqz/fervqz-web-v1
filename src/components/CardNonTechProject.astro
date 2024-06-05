@@ -39,7 +39,7 @@ const isMobileBrowser = () => {
             muted
             loop
           >
-            <source src={project.video} type="video/webm" />
+            <source src={project.video} type={project.type} />
             <source src={project.img} type="image/webp" />
           </video>
         </>

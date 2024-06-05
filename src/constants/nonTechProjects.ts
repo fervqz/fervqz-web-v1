@@ -5,7 +5,7 @@ const NON_TECH_PROJECTS = [
         "I love watches, so I started an instagram account to share this passion with others.",
       href: "https://instagram.com/fers.watches",
       img: "/img/fers-watches.webp",
-      video: "/videos/hover-watches-fix.mp4",
+      video: "/videos/hover-watches-fix-2.mp4",
       type: 'video/mp4',
     },
     {
