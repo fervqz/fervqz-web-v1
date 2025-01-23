@@ -32,6 +32,17 @@ const EXPERIENCE = [
         "Designed and developed a components library with ReactJS and TailwindCSS for unifying all design systems of each company's web application.",
       ],
     },
+    {
+      role: "Frontend Engineer",
+      company: "Knack",
+      date: "Jul 2024 — Today",
+      img: "/img/logo-knack.svg",
+      activities: [
+        "Migrated the company's core product to its latest version, adhering to <b>industry-leading standards</b> and ensuring a seamless user experience.",
+	      "Designed and implemented a <b>reusable components system</b> to streamline development across multiple projects, improving efficiency and consistency.",
+	      "Contributed to code reviews, ensuring adherence to <b>best practices</b> and maintaining codebase quality.",
+      ],
+    },
   ];
 
   export default EXPERIENCE;
