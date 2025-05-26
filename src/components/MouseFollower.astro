@@ -1,0 +1,20 @@
+<canvas
+  id="mouse-follower"
+  class="fixed pointer-events-none z-10 bg-slate-200 bg-opacity-10 rounded-full transition-transform duration-100 ease-out"
+  width="70px"
+  height="70px"></canvas>
+
+<script>
+  import { $ } from "../lib/querySelector";
+
+  const size = 70;
+  const canvas = $("#mouse-follower") as HTMLCanvasElement;
+  const ctx = canvas.getContext("2d");
+
+  canvas.style.top = "0px";
+  canvas.style.left = "0px";
+
+  document.addEventListener("mousemove", (e) => {
+    canvas.style.transform = `translate(${e.clientX - size / 2}px, ${e.clientY - size / 2}px)`;
+  });
+</script>
