@@ -9,12 +9,11 @@
 
   const size = 70;
   const canvas = $("#mouse-follower") as HTMLCanvasElement;
-  const ctx = canvas.getContext("2d");
 
   canvas.style.top = "0px";
   canvas.style.left = "0px";
 
   document.addEventListener("mousemove", (e) => {
-    canvas.style.transform = `translate(${e.clientX - size / 2}px, ${e.clientY - size / 2}px)`;
+    canvas.style.transform = `translate3d(${e.clientX - size / 2}px, ${e.clientY - size / 2}px, 0px)`;
   });
 </script>
