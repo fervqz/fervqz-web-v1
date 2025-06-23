@@ -1,5 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import PostHog from "../components/PostHog.astro";
 import ScrollToTop from "../components/ScrollToTop.astro";
 
 const title = "Fervqz | Full-Stack Web Developer";
@@ -10,6 +11,7 @@ const description =
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
+    <PostHog />
   </head>
   <body class="overflow-x-hidden">
     <slot />
